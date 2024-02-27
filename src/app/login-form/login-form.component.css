@@ -1,0 +1,43 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+main {
+  height: 100%; /* ou une valeur appropriée */
+  overflow: auto; /* ou overflow: scroll; */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 2rem;
+    padding: 2rem 2rem 2rem;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+
+.hero {
+  background-color: var(--midnight-green);
+  --section-padding: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a{
+    color: var(--midnight-green);
+}
+a:hover{
+    color: var(--midnight-green);
+}

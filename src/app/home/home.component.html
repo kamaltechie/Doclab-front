@@ -1,0 +1,551 @@
+<app-navbar></app-navbar>
+<main>
+    <article>
+
+
+
+      <section class="section hero" style="background-image: url('assets/images/hero-bg.png')" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before revealed" data-reveal="left">Welcome To Doclab</p>
+
+            <h2 class="headline-lg hero-title revealed" data-reveal="left">
+              Find Nearest
+              <br/>
+              <br/>
+              <br/>
+
+               Doctor.
+            </h2>
+
+            <div class="hero-card revealed" data-reveal="left">
+
+              <p class="title-lg card-text revealed">
+                Search doctors
+              </p>
+              <form  (ngSubmit)="getMedecins()">
+              <div class="wrapper revealed">
+
+
+                <div class="input-wrapper title-lg revealed">
+                  <input type="text" [(ngModel)]="specialite" name="specialite" placeholder="specialite" class="input-field">
+                </div>
+                <div class="input-wrapper title-lg revealed">
+                  <input type="text" [(ngModel)]="ville" name="location" placeholder="Locations" class="input-field">
+
+                  <ion-icon name="location"></ion-icon>
+                </div>
+
+                <button type="submit" class="btn has-before">
+                  <ion-icon name="search"></ion-icon>
+
+                  <span class="span title-md revealed">Find Now</span>
+                </button>
+               </div>
+               </form>
+
+
+            </div>
+
+          </div>
+
+          <figure class="hero-banner revealed" data-reveal="right">
+            <img src="assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
+              class="w-100 revealed">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #SERVICE
+      -->
+
+      <section class="service" aria-label="service">
+        <div class="container revealed">
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card revealed" data-reveal="bottom">
+
+                <div class="card-icon revealed">
+                  <img src="assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="headline-sm card-title revealed">
+                  <a   [routerLink]="['/liste-medecins', 'psychiatrie','']" href="#">psychiatrie</a>
+                </h3>
+
+                <p class="card-text revealed">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                </p>
+
+                <button [routerLink]="['/liste-medecins', 'psychiatrie','']" class="btn-circle revealed" aria-label="read more about psychiatry">
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="headline-sm card-title revealed">
+                  <a [routerLink]="['/liste-medecins', 'gynécologie','']" href="#">gynécologie</a>
+                </h3>
+
+                <p class="card-text revealed">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                </p>
+
+                <button [routerLink]="['/liste-medecins', 'gynécologie','']" class="btn-circle revealed" aria-label="read more about Gynecology">
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card revealed" data-reveal="bottom">
+
+                <div class="card-icon revealed">
+                  <img src="assets/images/icon-3.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="headline-sm card-title revealed">
+                  <a [routerLink]="['/liste-medecins', 'pneumologie','']" href="#">pneumologie</a>
+                </h3>
+
+                <p class="card-text revealed">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                </p>
+
+                <button  [routerLink]="['/liste-medecins', 'pneumologie','']" class="btn-circle revealed" aria-label="read more about Pulmonology">
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card revealed" data-reveal="bottom">
+
+                <div class="card-icon revealed">
+                  <img src="assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="headline-sm card-title revealed">
+                  <a [routerLink]="['/liste-medecins', 'généraliste','']" href="#"> généraliste </a>
+                </h3>
+
+                <p class="card-text revealed">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                </p>
+
+                <button [routerLink]="['/liste-medecins', 'généraliste','']" class="btn-circle revealed" aria-label="read more about Orthopedics">
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-labelledby="about-label">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="section-subtitle title-lg has-after revealed" id="about-label" data-reveal="left">About Us</p>
+
+            <h2 class="headline-md revealed" data-reveal="left">Experienced Workers</h2>
+
+            <p class="section-text revealed" data-reveal="left">
+              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.
+              Aliquam
+            </p>
+
+            <ul class="tab-list revealed revealed" data-reveal="left">
+
+              <li>
+                <button class="tab-btn active">Vision</button>
+              </li>
+
+              <li>
+                <button class="tab-btn">Mission</button>
+              </li>
+
+              <li>
+                <button class="tab-btn">Strategy</button>
+              </li>
+
+            </ul>
+
+            <p class="tab-text revealed" data-reveal="left">
+              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.
+              Aliquam a bibendum mi, sed condimentum
+            </p>
+
+            <div class="wrapper">
+
+              <ul class="about-list">
+
+                <li class="about-item revealed" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Sonsectetur adipisicing elit</span>
+                </li>
+
+                <li class="about-item revealed" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Exercitation ullamco laboris</span>
+                </li>
+
+                <li class="about-item revealed" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Eiusmod tempor incididunt</span>
+                </li>
+
+                <li class="about-item revealed" data-reveal="left">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                  <span class="span">Aolore magna aliqua</span>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <figure class="about-banner revealed" data-reveal="right">
+            <img src="assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #LISTING
+      -->
+
+      <section class="section listing" aria-labelledby="listing-label">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <p class="section-subtitle title-lg revealed" id="listing-label" data-reveal="left">Doctors Listig</p>
+
+              <h2 class="headline-md revealed" data-reveal="left">Browse by specialist</h2>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'psychiatrie','']">
+              <div  class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">psychiatrie</h3>
+
+                  <p class="card-text">Porta velit</p>
+                </div>
+
+              </div>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'gynécologie','']">
+              <div class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">gynécologie</h3>
+
+                  <p class="card-text">Mattis augue</p>
+                </div>
+
+              </div>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'pneumologie','']">
+              <div class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">pneumologie</h3>
+
+                  <p class="card-text">Mauris laoreet</p>
+                </div>
+
+              </div>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'orthopédie','']">
+              <div class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">orthopédie</h3>
+
+                  <p class="card-text">Convallis vulputate</p>
+                </div>
+
+              </div>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'pédiatrie','']">
+              <div class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">pédiatrie</h3>
+
+                  <p class="card-text">Posuere maecenas</p>
+                </div>
+
+              </div>
+            </li>
+
+            <li [routerLink]="['/liste-medecins', 'ostéologie','']">
+              <div class="listing-card revealed" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="assets/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3  class="headline-sm card-title">ostéologie</h3>
+
+                  <p class="card-text">Nisi nullam</p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <section class="section blog" aria-labelledby="blog-label">
+        <div class="container">
+
+          <p class="section-subtitle title-lg text-center revealed" id="blog-label" data-reveal="bottom">
+            News & Article
+          </p>
+
+          <h2 class="section-title headline-md text-center revealed" data-reveal="bottom">Latest Articles</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card has-before has-after revealed" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after revealed" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Give children more autonomy during the pandemic</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after revealed" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">How do binge eating and drinking impact the liver?</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+    <app-footer></app-footer>
+  </main>
+
+<!-- <div class="jumbotron">
+  <div class="content">
+    <h1 class="display-4">Bienvenue à l'Hôpital XYZ</h1>
+    <p class="lead">Prenez rendez-vous avec nos médecins qualifiés</p>
+    <a class="btn btn-lg btn-login" (click)="rendezVous()" role="button">Se connecter</a>
+  </div>
+</div>
+
+<div class="container hospital-info">
+  <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2>À Propos de l'Hôpital XYZ</h2>
+        <p>
+            Bienvenue à l'Hôpital XYZ, où votre santé est notre priorité. Nous nous engageons à fournir des soins
+            de qualité et à offrir une expérience positive à chaque patient.
+        </p>
+    </div>
+</div>
+
+<div class="container hospital-info">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="./assets/img/ezgif.com-video-to-gif-converted (1).gif" alt="GIF hospital" class="img-fluid">
+        </div>
+        <div class="col-md-6 mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="info-block">
+                        <h3>Nombre de Médecins</h3>
+                        <p>50+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="info-block">
+                        <h3>Note de Service</h3>
+                        <p>4.8/5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="info-block">
+                        <h3>Nombre de Patients</h3>
+                        <p>10,000+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

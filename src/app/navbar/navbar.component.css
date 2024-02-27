@@ -1,0 +1,30 @@
+header {
+    background-color: var(--midnight-green);
+    position: relative;
+}
+a:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+/*body {
+    background-color: #ffffff;  White background
+    color: #333333;  Dark text color
+}
+a{
+    color:white
+
+.navbar {
+    background-color: #3498db;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+color: #ecf0f1;
+}*/

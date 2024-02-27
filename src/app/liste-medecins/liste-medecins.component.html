@@ -1,0 +1,113 @@
+<main>
+  <app-navbar></app-navbar>
+<div class="liste">
+<section class="section hero" style="background-image: url('assets/images/hero-bg.png')" aria-label="home">
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-card">
+
+          <p class="title-lg card-text">
+           <strong>Search doctors</strong>
+          </p>
+
+
+            <div class="wrapper revealed">
+
+
+              <div class="input-wrapper title-lg revealed">
+                <input type="text" [(ngModel)]="searchText"  name="specialite" placeholder="filtrer avec specialite ou ville ou nom" class="input-field">
+              </div>
+              <!-- <div class="input-wrapper title-lg revealed">
+                <input type="text" [(ngModel)]="ville" name="location" placeholder="Locations" class="input-field">
+
+                <ion-icon name="location"></ion-icon>
+              </div> -->
+
+              <!-- <button type="submit" class="btn has-before">
+                <ion-icon name="search"></ion-icon>
+
+                <span class="span title-md revealed">Find Now</span>
+              </button> -->
+             </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <ng-container *ngIf="medecins.length>0;else ElseIf">
+  <section class="section blog" aria-labelledby="blog-label">
+    <div class="container">
+
+      <p class="section-subtitle title-lg text-center revealed" id="blog-label" data-reveal="bottom">
+        News & Article
+      </p>
+
+      <h2 class="section-title headline-md text-center revealed" data-reveal="bottom">Listes Medecins</h2>
+
+      <ul class="grid-list">
+
+        <li *ngFor="let m of medecins | filter :searchText">
+          <div class="blog-card has-before has-after revealed" data-reveal="bottom">
+
+            <div class="meta-wrapper">
+
+              <div class="card-meta">
+                <ion-icon name="person-outline"></ion-icon>
+
+                <span class="span"> {{m.nom}} </span>
+                <span class="span"> {{m.prenom}} </span>
+              </div>
+
+              <div class="card-meta">
+                <ion-icon name="folder-outline"></ion-icon>
+
+                <span class="span">{{m.specialite}}</span>
+              </div>
+
+            </div>
+
+            <h3 class="headline-sm card-title"><strong>address:</strong>{{m.adresse}}</h3>
+            <h3 class="headline-sm card-title"><strong>ville:</strong>{{m.ville}}</h3>
+
+            <time class="title-sm date" datetime="2022-01-28">Conventionné secteur 1</time>
+
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              labore et dolore magna aliquyam erat
+            </p>
+
+            <a *ngIf="userRole != null" (click)="prendreRendezVous(m)" class="btn-text title-lg">Prendre rendez-vous</a>
+
+          </div>
+        </li>
+
+
+
+      </ul>
+
+    </div>
+  </section>
+  </ng-container>
+  <ng-template #ElseIf>
+    <section class="section blog" aria-labelledby="blog-label">
+      <div class="container">
+
+        <p class="section-subtitle title-lg text-center revealed" id="blog-label" data-reveal="bottom">
+          Listes Medecins
+        </p>
+
+        <h2 class="section-title headline-md text-center revealed" data-reveal="bottom">il n'ya pas encore de medecins</h2>
+      </div>
+    </section>
+
+  </ng-template>
+
+
+
+</div>
+<app-footer></app-footer>
+</main>

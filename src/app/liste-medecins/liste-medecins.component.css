@@ -1,0 +1,31 @@
+.hero {
+    height: 50% !important;
+    --section-padding: 125px;
+    padding-bottom:  50px; ;
+
+}
+    .hero-card{
+        width: 110rem ;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+.liste {
+    margin-bottom: 20px;
+    position: relative;
+}
+.blog {
+    padding: 50px;
+
+}
+.headline-md{
+    font-family: var(--ff-oswald);
+    font-size: var(--headline-md);
+    font-weight: var(--fw-700);
+}
+main {
+  height: 100%; /* ou une valeur appropriée */
+  overflow: auto; /* ou overflow: scroll; */
+}

@@ -1,0 +1,20 @@
+<main><app-navbar></app-navbar>
+<div class="container">
+    <div class="row justify-content-center">
+      <h1>Profile</h1>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nom Prénom : {{patient.nom}} {{patient.prenom}}</li>
+            <li class="list-group-item">Age : {{patient.age}}</li>
+            <li class="list-group-item">Sexe : {{sexe}}</li>
+            <li class="list-group-item">Adresse : {{patient.adresse}}</li>
+            <li class="list-group-item">Mail : {{patient.mail}}</li>
+            <li class="list-group-item">Poids : {{patient.poids}}</li>
+            <li class="list-group-item">Taille : {{patient.taille}}</li>
+            <li class="list-group-item">Assurance : {{patient.num_assurance}}</li>
+            <li class="list-group-item">Mot de passe : {{patient.mdp}}</li>
+            </ul>
+            <button type="button" class="btn" (click)="modifier()">Modifier le profile</button>
+    </div>
+</div>
+<app-footer></app-footer>
+</main>

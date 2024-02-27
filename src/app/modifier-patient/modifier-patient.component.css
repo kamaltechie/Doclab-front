@@ -1,0 +1,49 @@
+main {
+  height: 100%; /* ou une valeur appropriée */
+  overflow: auto; /* ou overflow: scroll; */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
+}
+
+.row {
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+.list-group {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.list-group-item:nth-child(even) {
+  background-color: #9fd3c7;
+}
+
+.list-group-item strong {
+  font-weight: bold;
+}
+
+
